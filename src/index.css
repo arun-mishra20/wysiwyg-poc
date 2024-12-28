@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ProseMirror {
+  @apply min-h-[200px] p-4 focus:outline-none;
+}
+
+.ProseMirror table {
+  @apply border-collapse table-auto w-full my-4;
+}
+
+.ProseMirror th {
+  @apply bg-gray-100 font-bold;
+}
+
+.ProseMirror td,
+.ProseMirror th {
+  @apply border border-gray-300 p-2 relative;
+  min-width: 100px;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto my-4;
+  &.ProseMirror-selectednode {
+    @apply outline-2 outline-blue-500 outline;
+  }
+}
+
+/* Improved comment highlight styles */
+.comment-highlight {
+  position: relative;
+  display: inline;
+  background-color: rgba(255, 212, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 2px 0;
+  border-radius: 2px;
+}
+
+.comment-highlight:hover {
+  background-color: rgba(255, 212, 0, 0.6);
+}
